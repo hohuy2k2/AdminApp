@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- EditText for Date -->
+    <TextView
+        android:id="@+id/textLbDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter date (DD/MM/YYYY)"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/textLbDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText for Time -->
+    <TextView
+        android:id="@+id/textLbTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter time (HHMM)"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/textLbTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText for Capacity -->
+    <TextView
+        android:id="@+id/textLbCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacity:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCapacity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter capacity"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/textLbCapacity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText for Duration -->
+    <TextView
+        android:id="@+id/textLbDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration (minutes):"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtCapacity"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter duration"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/textLbDuration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText for Price -->
+    <TextView
+        android:id="@+id/textLbPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtDuration"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter price"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/textLbPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText for Description -->
+    <TextView
+        android:id="@+id/textLbDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtPrice"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter description"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/textLbDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp" />
+
+    <!-- RadioGroup for Class Type -->
+    <TextView
+        android:id="@+id/textLbClassType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Type:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtDescription"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupClassType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textLbClassType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioFlow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flow Yoga" />
+
+        <RadioButton
+            android:id="@+id/radioAerial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aerial Yoga" />
+
+        <RadioButton
+            android:id="@+id/radioFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family Yoga" />
+    </RadioGroup>
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#2DCFA2A2"
+        android:text="Update Course"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupClassType" />
+</androidx.constraintlayout.widget.ConstraintLayout>
